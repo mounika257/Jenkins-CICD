@@ -67,7 +67,7 @@ pipeline {
     }
     stage('SonarQube GateKeeper') {
         steps {
-          timeout(time : 1, unit : 'HOURS'){
+          timeout(time : 5, unit : 'MINUTES'){
           waitForQualityGate abortPipeline: true
           }
        }
